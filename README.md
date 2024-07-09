@@ -40,14 +40,60 @@ A new Flutter project.
 - It is used for the listener to observe a model for changes. 
 - In this, we only use the notifyListener() method to inform the listeners.
 
+Example:
+```
+import 'package:flutter/material.dart';  
+  
+class Counter with ChangeNotifier {  
+  int _counter;  
+  
+  Counter(this._counter);  
+  
+  getCounter() => _counter;  
+  setCounter(int counter) => _counter = counter;  
+  
+  void increment() {  
+    _counter++;  
+    notifyListeners();  
+  }  
+  
+  void decrement() {  
+    _counter--;  
+    notifyListeners();  
+  }  
+}  
+```
 ## ChangeNotiferProvider
 
 - ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants. 
 - It comes from the provider package.
 - The following code snippets help to understand the concept of ChangeNotifierProvider.
 
+Example:
+```
+void main() {  
+  runApp(  
+    MultiProvider(  
+      providers: [  
+        ChangeNotifierProvider(builder: (context) => Counter()),  
+        Provider(builder: (context) => SomeOtherClass()),  
+      ],  
+      child: MyApp(),  
+    ),  
+  );  
+}  
+```
 ## Cousumer
 
 - It is a type of provider that does not do any fancy work.
 -  It just calls the provider in a new widget and delegates its build implementation to the builder.
-- The following code explains it more clearly
+- The following code explains it more clearly.
+
+Example:
+```
+return Consumer<Counter>(  
+  builder: (context, count, child) {  
+    return Text("Total price: ${count.total}");  
+  },  
+);  
+```
