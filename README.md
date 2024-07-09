@@ -41,7 +41,7 @@ A new Flutter project.
 - In this, we only use the notifyListener() method to inform the listeners.
 
 Example:
-```
+```bash
 import 'package:flutter/material.dart';  
   
 class Counter with ChangeNotifier {  
@@ -70,7 +70,7 @@ class Counter with ChangeNotifier {
 - The following code snippets help to understand the concept of ChangeNotifierProvider.
 
 Example:
-```
+```bash
 void main() {  
   runApp(  
     MultiProvider(  
@@ -90,7 +90,7 @@ void main() {
 - The following code explains it more clearly.
 
 Example:
-```
+```bash
 return Consumer<Counter>(  
   builder: (context, count, child) {  
     return Text("Total price: ${count.total}");  
