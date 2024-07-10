@@ -6,9 +6,6 @@ A new Flutter project.
   <p>
       <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/684095c4-df4e-4cc0-a71c-46140d99fc7e"height=28% width=32%>
       <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/f7244c9b-0f67-4488-ae16-9213c68bb4cd"height=28% width=32%>
-
-
-
   </p>
 
 ## State
@@ -106,3 +103,13 @@ return Consumer<Counter>(
 );  
 ```
 https://drive.google.com/file/d/1l2y1_yjpRyXCBdwTX0MEp7N7IDH45Tbv/view?usp=drive_link
+
+##  Provider & Change Theme using Provider
+
+<p>
+      <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/8d2cdb30-dac4-4101-a9dc-16783d11a25e"height=28% width=32%>
+      <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/7b8f6ff6-e067-47c3-af35-c3b9e3f6e364"height=28% width=32%>
+
+  </p>
+
+
