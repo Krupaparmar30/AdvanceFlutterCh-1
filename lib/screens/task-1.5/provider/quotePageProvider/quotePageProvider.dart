@@ -490,5 +490,6 @@ class quoteProvider extends ChangeNotifier {
   void removeQuotes(int index)
   {
    QuotesList.removeAt(index);
+   notifyListeners();
   }
 }

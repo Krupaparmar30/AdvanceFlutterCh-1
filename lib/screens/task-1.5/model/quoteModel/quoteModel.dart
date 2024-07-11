@@ -10,12 +10,12 @@ class QuoteModel {
     return QuoteModel(author: m1['author'], quote: m1['quote']);
   }
 
-  List<QuoteModel> QuoteList = [];
+  List<QuoteModel> QuoteListNew = [];
 
   QuoteModel.toList(List l1)
   {
     for (int i = 0; i < l1.length; i++) {
-      QuoteList.add(QuoteModel.fromQuotes(l1[i]));
+      QuoteListNew.add(QuoteModel.fromQuotes(l1[i]));
     }
   }
 }
