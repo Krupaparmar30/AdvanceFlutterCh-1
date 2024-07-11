@@ -114,6 +114,7 @@ https://drive.google.com/file/d/1l2y1_yjpRyXCBdwTX0MEp7N7IDH45Tbv/view?usp=drive
 
 
 https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/018c5865-ad0a-48ff-b191-fcafbc4a38bb
+## Quotes Data Solving with Provider
 
   <p>
       <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/0feb16c1-127f-4ec4-aef7-df9e359434c1"height=28% width=32%>
