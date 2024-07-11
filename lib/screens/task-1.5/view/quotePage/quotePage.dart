@@ -39,7 +39,7 @@ class quotePage extends StatelessWidget {
               quoteModelNew.QuoteListNew[index].quote.toString(),
             ),
             subtitle: Text(
-              quoteModelNew.QuoteListNew[index].quote.toString(),
+              quoteModelNew.QuoteListNew[index].author.toString(),
             ),
             trailing: GestureDetector(
                 onDoubleTap: () {
@@ -105,6 +105,7 @@ class quotePage extends StatelessWidget {
                           height: 20,
                         ),
                         TextFormField(
+                          style: const TextStyle(color: Colors.white),
                           validator: (value) {
                             if (value!.isEmpty) {
                               return 'Field Must be Required !';
