@@ -1,14 +1,29 @@
-import 'package:avd_ch_1/screens/stepper2Page/stepper2Page.dart';
-import 'package:avd_ch_1/screens/stepperPage/stepperPage.dart';
-import 'package:avd_ch_1/screens/task-1.4/provider/light_dark_theme_provider/light_dark_theme_provider.dart';
-import 'package:avd_ch_1/screens/task-1.4/view/home_page/home_page.dart';
-import 'package:avd_ch_1/screens/task-1.5/provider/quotePageProvider/quotePageProvider.dart';
-import 'package:avd_ch_1/screens/task-1.5/view/quotePage/quotePage.dart';
+
+import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/provider/provider.dart';
+import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/homePageOne/homePageOne.dart';
+import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/oneTimeScreen/oneTimeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(myApp());
+
+Future<void> main() async {
+  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+
+ bool isHome1 = sharedPreferences.getBool("one1") ?? false;
+
+
+
+  runApp(MultiProvider(
+    providers: [
+
+      ChangeNotifierProvider(
+        create: (context) => OneTimeProvider(isHome1),
+      ),
+    ],
+    builder: (context, child) => myApp(),
+  ));
 }
 
 class myApp extends StatelessWidget {
@@ -16,34 +31,35 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => quoteProvider(),
-      builder: (context, child) => MaterialApp(
-        // theme: ThemeData(
-        //     colorScheme: ColorScheme.light(
-        //   primary: Colors.purple,
-        //   secondary: Colors.green,
-        //   onPrimary: Colors.red,
-        //   onSecondary: Colors.blue,
-        // )),
-        // darkTheme: ThemeData(
-        //     colorScheme: ColorScheme.dark(
-        //   primary: Colors.yellow,
-        //   secondary: Colors.blue,
-        //   onPrimary: Colors.orange,
-        //   onSecondary: Colors.pink,
-        // )),
-        // themeMode: Provider.of<ThemeChangeProvider>(context).isDark
-        //     ? ThemeMode.dark
-        //     : ThemeMode.light,
+    // ThemeChangeProvider ThemeChangeProviderTrue =
+    //     Provider.of<ThemeChangeProvider>(context, listen: true);
+    // ThemeChangeProvider ThemeChangeProviderFalse =
+    //     Provider.of<ThemeChangeProvider>(context, listen: false);
 
-        debugShowCheckedModeBanner: false,
-        home: quotePage(),
-        // routes: {
-        //   '/':(context)=>stepperPage(),
-        //   "/secound":(context)=>stepper2Page()
-        // },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // theme: ThemeData(
+      //     colorScheme: ColorScheme.light(
+      //   primary: Colors.purple,
+      //   secondary: Colors.green,
+      //   onPrimary: Colors.red,
+      //   onSecondary: Colors.blue,
+      // )),
+      // darkTheme: ThemeData(
+      //     colorScheme: ColorScheme.dark(
+      //   primary: Colors.yellow,
+      //   secondary: Colors.blue,
+      //   onPrimary: Colors.orange,
+      //   onSecondary: Colors.pink,
+      // )),
+      // themeMode: Provider.of<ThemeChangeProvider>(context).isDark
+      //     ? ThemeMode.dark
+      //     : ThemeMode.light,
+
+      // debugShowCheckedModeBanner: false,
+      home: Provider.of<OneTimeProvider>(context,listen: false).isTrueOne
+          ? homePageOne():oneTimePage1()
+      ,
     );
   }
 }
