@@ -12,34 +12,38 @@ class oneTimeScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           children: [
             SizedBox(
-              height: 50,
+              height: 100,
             ),
-            Container(
-              height: 200,
-              width: 200,
-              decoration:  BoxDecoration(
-                color: Colors.pink,
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                  image: AssetImage(
-                      "assets/images/o2.png"
-                  )
-                )
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Container(
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage("assets/images/o2.png"))),
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Text("Design Template uploads \n Every Tuesday !",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-            Text("Make sure to take a look my uplab \n profile every tuesday!",style: TextStyle(
-                color: Colors.grey.shade400
+            Text("Design Template uploads \n         Every Tuesday !",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Make sure to take a look my uplab \n          profile every tuesday!",style: TextStyle(
+                color: Colors.grey.shade500,fontSize: 12
+
             ),),
             SizedBox(
-              height: 30,
+              height: 125,
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),
@@ -58,7 +62,7 @@ class oneTimeScreen2 extends StatelessWidget {
 
 
 
-                ,child: Text("Skip",style: TextStyle(color: Colors.grey),)),
+                ,child: Text("Skip",style: TextStyle(color: Colors.grey.shade900),)),
                   GestureDetector(
                       onDoubleTap: () {
                         Navigator.of(context).pushReplacement(

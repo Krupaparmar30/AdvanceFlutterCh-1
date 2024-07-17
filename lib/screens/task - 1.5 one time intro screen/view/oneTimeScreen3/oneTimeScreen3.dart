@@ -9,34 +9,37 @@ class oneTimeScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           children: [
             SizedBox(
-              height: 50,
+              height: 100,
             ),
-            Container(
-              height: 200,
-              width: 200,
-              decoration:  BoxDecoration(
-                color: Colors.pink,
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                  image: AssetImage(
-                      "assets/images/o3.png"
-                  )
-                )
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Container(
+                height: 280,
+                width: 280,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage("assets/images/o3.png"))),
               ),
             ),
             SizedBox(
               height: 20,
             ),
             Text("Download now !",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-            Text("You can follow me if you wantand comment \n on any to get some freebies",style: TextStyle(
-                color: Colors.grey.shade400
+            SizedBox(
+              height: 25,
+            ),
+            Text("You can follow me if you wantand comment \n              on any to get some freebies",style: TextStyle(
+                color: Colors.grey.shade500
             ),),
             SizedBox(
-              height: 30,
+              height: 130,
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),
@@ -53,11 +56,11 @@ class oneTimeScreen3 extends StatelessWidget {
 
 
 
-                ,child: Text("Skip",style: TextStyle(color: Colors.grey),)),
+                ,child: Text("Skip",style: TextStyle(color: Colors.grey.shade900),)),
                   GestureDetector(
                       onDoubleTap: () {
                         Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (context) => oneTimeScreen3(),)
+                            MaterialPageRoute(builder: (context) => homePageOne(),)
                         );
                       }
 

@@ -10,68 +10,75 @@ class oneTimePage1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-        body: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 50,
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+
+          children: [
+            SizedBox(
+              height: 100,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Container(
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage("assets/images/o1.png"))),
               ),
-              Container(
-                height: 200,
-                width: 200,
-                decoration:  BoxDecoration(
-                  color: Colors.pink,
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-  "assets/images/o1.png"
-                    )
-                  )
-                ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Welcome to Surat",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "I provide essential stuff for your \n      ui designs every tuesday!",
+              style: TextStyle(color: Colors.grey.shade500,fontSize: 14),
+            ),
+            SizedBox(
+              height: 130,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => homePageOne(),
+                        ));
+                      },
+                      child: Text(
+                        "Skip",
+                        style: TextStyle(color: Colors.grey.shade900),
+                      )),
+                  GestureDetector(
+                      onDoubleTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => oneTimeScreen2(),
+                        ));
+                      },
+                      child: Text(
+                        "Next",
+                        style: TextStyle(color: Colors.grey.shade900),
+                      ))
+                ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Text("Welcome to Surat",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-              Text("I provide essential stuff for your \n ui designs every tuesday!",style: TextStyle(
-                color: Colors.grey.shade400
-              ),),
-              SizedBox(
-                height: 30,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                        onDoubleTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => homePageOne(),)
-                          );
-                        }
-
-
-
-                    ,child: Text("Skip",style: TextStyle(color: Colors.grey),)),
-                    GestureDetector(
-                    onDoubleTap: () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => oneTimeScreen2(),)
-                      );
-                    }
-
-
-
-                    ,child: Text("Next",style: TextStyle(color: Colors.grey),))
-                  ],
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
+      ),
     );
   }
 }
