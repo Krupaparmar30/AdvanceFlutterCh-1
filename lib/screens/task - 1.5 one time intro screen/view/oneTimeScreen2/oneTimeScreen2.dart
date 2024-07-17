@@ -1,7 +1,10 @@
 
-import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/homePageOne/homePageOne.dart';
-import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/oneTimeScreen3/oneTimeScreen3.dart';
+//import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/homePageOne/homePageOne.dart';
+//import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/oneTimeScreen3/oneTimeScreen3.dart';
 import 'package:flutter/material.dart';
+
+import '../homePageOne/homePageOne.dart';
+import '../oneTimeScreen3/oneTimeScreen3.dart';
 
 class oneTimeScreen2 extends StatelessWidget {
   const oneTimeScreen2({super.key});
@@ -20,11 +23,12 @@ class oneTimeScreen2 extends StatelessWidget {
               width: 200,
               decoration:  BoxDecoration(
                 color: Colors.pink,
-                // image: DecorationImage(
-                //   image: AssetImage(
-                //
-                //   )
-                // )
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                  image: AssetImage(
+                      "assets/images/o2.png"
+                  )
+                )
               ),
             ),
             SizedBox(

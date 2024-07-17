@@ -1,10 +1,14 @@
 
-import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/provider/provider.dart';
-import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/homePageOne/homePageOne.dart';
-import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/oneTimeScreen/oneTimeScreen.dart';
+//import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/provider/provider.dart';
+// import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/homePageOne/homePageOne.dart';
+// import 'package:avd_ch_1/screens/task%20-%201.5%20one%20time%20intro%20screen/view/oneTimeScreen/oneTimeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'screens/task - 1.5 one time intro screen/provider/provider.dart';
+import 'screens/task - 1.5 one time intro screen/view/homePageOne/homePageOne.dart';
+import 'screens/task - 1.5 one time intro screen/view/oneTimeScreen/oneTimeScreen.dart';
 
 
 Future<void> main() async {
@@ -22,12 +26,12 @@ Future<void> main() async {
         create: (context) => OneTimeProvider(isHome1),
       ),
     ],
-    builder: (context, child) => myApp(),
+    builder: (context, child) => MyApp(),
   ));
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
