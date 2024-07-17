@@ -33,6 +33,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     // ThemeChangeProvider ThemeChangeProviderTrue =
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
       home: Provider.of<OneTimeProvider>(context,listen: false).isTrueOne
           ? homePageOne():oneTimePage1()
       ,
+
     );
   }
 }
