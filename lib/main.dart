@@ -5,6 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/task - 1.5 one time intro screen/provider/provider.dart';
 import 'screens/task - 1.5 one time intro screen/view/homePageOne/homePageOne.dart';
 import 'screens/task - 1.5 one time intro screen/view/oneTimeScreen/oneTimeScreen.dart';
+import 'screens/task - 1.6  contact us page with interaction1/provider/provider.dart';
+import 'screens/task - 1.6  contact us page with interaction1/view/ contact_us_page_with_interaction/ contact_us_page_with_interaction .dart';
 
 bool isHome1=false;
 Future<void> main() async {
@@ -16,6 +18,9 @@ Future<void> main() async {
     providers: [
       ChangeNotifierProvider(
         create: (context) => OneTimeProvider(isHome1),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => contactProvider(),
       ),
     ],
     builder: (context, child) => MyApp(),
@@ -51,8 +56,9 @@ class MyApp extends StatelessWidget {
       //     : ThemeMode.light,
 
     debugShowCheckedModeBanner: false,
-        home: Provider.of<OneTimeProvider>(context,listen: false).isTrueOne
-            ? homePageOne():oneTimePage1()
+        home: contact_us_page_with_interaction()
+      // Provider.of<contactProvider>(context,listen: false).isTrueOne
+        //     ? homePageOne():oneTimePage1()
     );
   }
 }
