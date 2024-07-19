@@ -1,3 +1,6 @@
+import 'package:avd_ch_1/screens/task%20-%201.7/provider/provider.dart';
+import 'package:avd_ch_1/screens/task%20-%201.7/view/photo_gallary/photo_gallry.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,6 +25,7 @@ Future<void> main() async {
       ChangeNotifierProvider(
         create: (context) => contactProvider(),
       ),
+      ChangeNotifierProvider(create: (context) =>PhotoGallryProvider() ,)
     ],
     builder: (context, child) => MyApp(),
   ));
@@ -56,7 +60,7 @@ class MyApp extends StatelessWidget {
       //     : ThemeMode.light,
 
     debugShowCheckedModeBanner: false,
-        home: contact_us_page_with_interaction()
+        home: photo_gallry()
       // Provider.of<contactProvider>(context,listen: false).isTrueOne
         //     ? homePageOne():oneTimePage1()
     );
