@@ -199,6 +199,30 @@ https://github.com/user-attachments/assets/6ff7d47e-ed35-488f-8b22-f834cb8e8cef
    **iOS Integration**
     - Note that this plugin works with both Touch ID and Face ID. However, to use the latter, you need also to add:
 
+```bash
+    <key>NSFaceIDUsageDescription</key>
+<string>Why is my app authenticating using face id?</string>
+```
+* - to your Info.plist file. Failure to do so results in a dialogue that tells the user your app has not been updated to use Face ID.
+  ** Android Integration**
+    MainActivity.kt:
+    ```bash
+    import io.flutter.embedding.android.FlutterFragmentActivity
+    class MainActivity : FlutterFragmentActivity() {
+    // ...
+     }
+    ```
+- Update your project's AndroidManifest.xml file to include the USE_BIOMETRIC permissions:
+ ```bash
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.app">
+          
+  <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+  
+<manifest>
+```
+    
+
 <p>
       <img src="https://github.com/user-attachments/assets/7e745871-61a6-47d2-9309-4a5038da0cf9"height=28% width=32%>
       <img src="https://github.com/user-attachments/assets/b8abe2f1-e76b-4ecc-89e5-f82e0c81e6d9"height=28% width=32%>
