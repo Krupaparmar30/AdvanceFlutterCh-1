@@ -1,7 +1,9 @@
 # avd_ch_1
 
 A new Flutter project.
+• The Stepper Widget in Flutter is a versatile tool that plays a crucial role in enhancing user experience within mobile applications.
 
+• It provides an intuitive way to guide users through a multi-step process, allowing developers to create interactive and user-friendly interfaces.
 - Stepper
   <p>
       <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/684095c4-df4e-4cc0-a71c-46140d99fc7e"height=28% width=32%>
@@ -108,6 +110,11 @@ https://drive.google.com/file/d/1l2y1_yjpRyXCBdwTX0MEp7N7IDH45Tbv/view?usp=drive
 
 </p>
 ##  Provider & Change Theme using Provider
+Provider & Change Theme using Provider :-
+The Provider package, created by Remi Rousselet, aims to handle the state as cleanly as possible.
+In Provider, widgets listen to changes in the state and update as soon as they are notified.
+Provider State Management, which is recommended by Google as well, mainly provides you with a central point to manage the state, and to write front-end logic.
+A provider is a third-party library. Here, we need to understand three main concepts to use this library.
 
 <p>
       <img src="https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/8d2cdb30-dac4-4101-a9dc-16783d11a25e"height=28% width=32%>
