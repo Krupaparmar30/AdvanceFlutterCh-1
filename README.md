@@ -131,16 +131,17 @@ https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/018c5865-ad
 This data remains intact across app restarts, making it perfect for scenarios where you need to save user choices or maintain the state of an app.
 ```bash
 final SharedPreferences prefs = await SharedPreferences.getInstance();
+
 // Save an integer value to 'counter' key.
-await prefs.setInt('counter', 10);
-// Save an boolean value to 'repeat' key.
-await prefs.setBool('repeat', true);
+await prefs.setInt('counter', 15);
 // Save an double value to 'decimal' key.
 await prefs.setDouble('decimal', 1.5);
+// Save an boolean value to 'repeat' key.
+await prefs.setBool('repeat', true);
 // Save an String value to 'action' key.
 await prefs.setString('action', 'Start');
 // Save an list of strings to 'items' key.
-await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']); 
+await prefs.setStringList('items', <String>['Movie', 'Sport', 'Games']); 
 
 ```
 ## Quotes Data Solving with Provider
@@ -167,17 +168,26 @@ https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/cf1a54ca-fb
 https://github.com/user-attachments/assets/5868c34c-b0ef-49b9-89c6-a94c4f0e5462
 
 ## conect us 
+## Url_launchar Package
+
+* You should learn about the url_launcher package to add more functionality to your Flutter app. With this package, you can launch URLs, open email apps, dial phone numbers, and more from within your app.
+* 
+
 <p>
       <img src="https://github.com/user-attachments/assets/70db314d-4300-4217-9cf8-80dbaad56894"height=28% width=32%>
 
 </p>
-
-
-
-
 https://github.com/user-attachments/assets/6ff7d47e-ed35-488f-8b22-f834cb8e8cef
 
 ## 1.7 Photo Gallery With Biometric Authentication
+Local Authentication Package
+* The local_auth package, provided by the Flutter team, enables you to integrate local authentication methods like fingerprint, Touch ID, Face ID, passcode, PIN, or pattern recognition into your Flutter app. This enhances security by allowing users to authenticate themselves using their device's built-in features instead of relying solely on passwords.
+* 1> Add Dependency
+* - Open your project's `pubspec.yaml` file.
+- Under the `dependencies` section, add the following line:
+    
+    **YAML**
+
 <p>
       <img src="https://github.com/user-attachments/assets/7e745871-61a6-47d2-9309-4a5038da0cf9"height=28% width=32%>
       <img src="https://github.com/user-attachments/assets/b8abe2f1-e76b-4ecc-89e5-f82e0c81e6d9"height=28% width=32%>
