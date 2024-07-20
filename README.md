@@ -178,8 +178,7 @@ https://github.com/user-attachments/assets/5868c34c-b0ef-49b9-89c6-a94c4f0e5462
 
 </p>
 
-
-
+https://github.com/user-attachments/assets/9985e8d0-fda6-4b33-a0ae-78fa8b369167
 
 ## 1.7 Photo Gallery With Biometric Authentication
 
