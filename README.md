@@ -126,6 +126,23 @@ A provider is a third-party library. Here, we need to understand three main conc
 
 
 https://github.com/Krupaparmar30/AdvanceFlutterCh-1/assets/149374671/018c5865-ad0a-48ff-b191-fcafbc4a38bb
+## Shared Preference
+* SharedPreferences provides a persistent storage location for small data.
+This data remains intact across app restarts, making it perfect for scenarios where you need to save user choices or maintain the state of an app.
+```bash
+final SharedPreferences prefs = await SharedPreferences.getInstance();
+// Save an integer value to 'counter' key.
+await prefs.setInt('counter', 10);
+// Save an boolean value to 'repeat' key.
+await prefs.setBool('repeat', true);
+// Save an double value to 'decimal' key.
+await prefs.setDouble('decimal', 1.5);
+// Save an String value to 'action' key.
+await prefs.setString('action', 'Start');
+// Save an list of strings to 'items' key.
+await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']); 
+
+```
 ## Quotes Data Solving with Provider
 
   <p>
