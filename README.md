@@ -180,13 +180,24 @@ https://github.com/user-attachments/assets/5868c34c-b0ef-49b9-89c6-a94c4f0e5462
 https://github.com/user-attachments/assets/6ff7d47e-ed35-488f-8b22-f834cb8e8cef
 
 ## 1.7 Photo Gallery With Biometric Authentication
-Local Authentication Package
+
+**Local Authentication Package**
+
 * The local_auth package, provided by the Flutter team, enables you to integrate local authentication methods like fingerprint, Touch ID, Face ID, passcode, PIN, or pattern recognition into your Flutter app. This enhances security by allowing users to authenticate themselves using their device's built-in features instead of relying solely on passwords.
-* 1> Add Dependency
+  
+  **Stepes**
+  
+1> Add Dependency
 * - Open your project's `pubspec.yaml` file.
 - Under the `dependencies` section, add the following line:
     
     **YAML**
+  ```bash
+  local_auth: ^2.2.0  # Replace with the latest version if available
+  ```
+  * - Run `flutter pub get` to install the package.
+   **iOS Integration**
+    - Note that this plugin works with both Touch ID and Face ID. However, to use the latter, you need also to add:
 
 <p>
       <img src="https://github.com/user-attachments/assets/7e745871-61a6-47d2-9309-4a5038da0cf9"height=28% width=32%>
